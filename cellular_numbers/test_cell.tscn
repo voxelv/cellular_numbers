@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://test_cell.gd" type="Script" id=1]
 [ext_resource path="res://main_ui_theme.tres" type="Theme" id=2]
+[ext_resource path="res://html5_compat/html5_compat_LineEdit.tscn" type="PackedScene" id=3]
 
 [node name="main" type="Node"]
 script = ExtResource( 1 )
@@ -86,16 +87,28 @@ text = "0"
 align = 1
 valign = 1
 
-[node name="number_lineedit_hex" type="LineEdit" parent="ui/VBoxContainer"]
-margin_top = 786.0
+[node name="number_lineedit_hex_old" type="LineEdit" parent="ui/VBoxContainer"]
+visible = false
+margin_top = 756.0
 margin_right = 720.0
-margin_bottom = 842.0
+margin_bottom = 812.0
 align = 1
 editable = false
 
-[node name="number_lineedit" type="LineEdit" parent="ui/VBoxContainer"]
+[node name="number_lineedit_old" type="LineEdit" parent="ui/VBoxContainer"]
+visible = false
+margin_top = 756.0
+margin_right = 720.0
+margin_bottom = 812.0
+align = 1
+editable = false
+
+[node name="number_lineedit_hex" parent="ui/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 786.0
+margin_right = 720.0
+margin_bottom = 842.0
+
+[node name="number_lineedit" parent="ui/VBoxContainer" instance=ExtResource( 3 )]
 margin_top = 846.0
 margin_right = 720.0
 margin_bottom = 902.0
-align = 1
-editable = false
