@@ -1,0 +1,101 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://test_cell.gd" type="Script" id=1]
+[ext_resource path="res://main_ui_theme.tres" type="Theme" id=2]
+
+[node name="main" type="Node"]
+script = ExtResource( 1 )
+cell_size = 7
+
+[node name="ui" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ui"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ui/VBoxContainer"]
+margin_top = 378.0
+margin_right = 720.0
+margin_bottom = 428.0
+custom_constants/separation = 0
+alignment = 1
+
+[node name="decrease_size_button" type="Button" parent="ui/VBoxContainer/HBoxContainer"]
+margin_left = 260.0
+margin_right = 310.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "-"
+
+[node name="cell_size_label" type="Label" parent="ui/VBoxContainer/HBoxContainer"]
+margin_left = 310.0
+margin_right = 410.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="increase_size_button" type="Button" parent="ui/VBoxContainer/HBoxContainer"]
+margin_left = 410.0
+margin_right = 460.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "+"
+
+[node name="CenterContainer" type="CenterContainer" parent="ui/VBoxContainer"]
+margin_top = 432.0
+margin_right = 720.0
+margin_bottom = 782.0
+rect_min_size = Vector2( 350, 350 )
+
+[node name="grid_buttons_container" type="GridContainer" parent="ui/VBoxContainer/CenterContainer"]
+margin_left = 360.0
+margin_top = 175.0
+margin_right = 360.0
+margin_bottom = 175.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 3
+
+[node name="number_label_hex" type="Label" parent="ui/VBoxContainer"]
+visible = false
+margin_top = 759.0
+margin_right = 720.0
+margin_bottom = 809.0
+rect_min_size = Vector2( 0, 50 )
+text = "0x0"
+align = 1
+valign = 1
+
+[node name="number_label" type="Label" parent="ui/VBoxContainer"]
+visible = false
+margin_top = 786.0
+margin_right = 720.0
+margin_bottom = 836.0
+rect_min_size = Vector2( 0, 50 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="number_lineedit_hex" type="LineEdit" parent="ui/VBoxContainer"]
+margin_top = 786.0
+margin_right = 720.0
+margin_bottom = 842.0
+align = 1
+editable = false
+
+[node name="number_lineedit" type="LineEdit" parent="ui/VBoxContainer"]
+margin_top = 846.0
+margin_right = 720.0
+margin_bottom = 902.0
+align = 1
+editable = false

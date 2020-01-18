@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://main_ui_theme.tres" type="Theme" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Share_Tech_Mono/ShareTechMono-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = SubResource( 1 )
+
+[node name="Button" type="Button"]
+margin_right = 50.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+focus_mode = 0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+toggle_mode = true
+button_mask = 3
+enabled_focus_mode = 0
+clip_text = true
+align = 0
